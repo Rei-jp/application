@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->char('title',50);
+            $table->varchar('title',50);
             $table->integer('game_category_id');
             $table->intger('stremer_id');
             $table->text('URL');

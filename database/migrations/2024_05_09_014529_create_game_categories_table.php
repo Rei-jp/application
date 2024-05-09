@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('game_categories', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->char('name',30);
+            $table->varchar('name',30);
         });
     }
 
