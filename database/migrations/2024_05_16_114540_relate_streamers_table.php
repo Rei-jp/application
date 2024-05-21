@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('streamer_categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',30);
+        Schema::table('streamers', function (Blueprint $table) {
+            $table->foreignId('streamer_category_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -26,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('streamer_categories');
+        Schema::table('streamers', function (Blueprint $table) {
+            //
+        });
     }
 };

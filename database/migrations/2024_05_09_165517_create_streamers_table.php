@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('streamer_categories', function (Blueprint $table) {
-            $table->id();
+        Schema::create('streamers', function (Blueprint $table) {
+           $table->id();
             $table->string('name',30);
+            $table->text('streamer_URL');
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('streamer_categories');
+        Schema::dropIfExists('streamers');
     }
 };

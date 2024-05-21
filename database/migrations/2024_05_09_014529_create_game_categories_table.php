@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('game_categories', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->varchar('name',30);
+            $table->id();
+            $table->string('name',30);
         });
     }
 
